@@ -3,6 +3,7 @@
   font-style: normal;
   font-weight: 400 800;
   font-display: swap;
-  src: url("PlusJakartaSans-variable.ttf") format("truetype");
+  src: url("PlusJakartaSans-latin-wght.woff2") format("woff2"),
+       url("PlusJakartaSans-variable.ttf") format("truetype");
 }
 
