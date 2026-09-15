@@ -6,7 +6,7 @@ Static partner landing pages served via GitHub Pages.
 
 - Push to `main` = live on GitHub Pages.
 - Custom domain: `partners.evolvex360.com` (held as `CNAME.HOLD-until-dns` until Abdul DNS is live).
-- Path pattern: `/<deck-slug>/` (examples: `/icelandnow/`, `/wsl-yamaha/`).
+- Path pattern: `/<deck-slug>/` (examples: `/icelandnow/`, `/wsl-yamaha/`, `/transcend-adc-emails/`).
 
 ## Current decks
 
@@ -14,6 +14,7 @@ Static partner landing pages served via GitHub Pages.
 |------|------|
 | icelandnow | `/icelandnow/` |
 | wsl-yamaha | `/wsl-yamaha/` |
+| transcend-adc-emails | `/transcend-adc-emails/` |
 
 ## Local layout
 
@@ -35,6 +36,12 @@ Static partner landing pages served via GitHub Pages.
     preview-01.png
     preview-02.png
     WSL-Yamaha-Summer-Funnel-Jul-Aug-2026.pdf
+  transcend-adc-emails/  # Transcend Clinic AdC email proofs
+    index.html
+    vets/
+    private-pay/
+    family/
+    union/
 ```
 
 DNS for the custom domain is managed separately. Do not drop files on cPanel. Do not enable the live `CNAME` until DNS is ready.
