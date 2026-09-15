@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EvolveX360 · WSL Sport · Yamaha Summer Campaign</title>
+  <meta name="description" content="July and August 2026 performance: Super App funnel, geo display delivery, and CA$9 CPM model.">
+  <link rel="stylesheet" href="fonts/plus-jakarta.css">
+  <style>
+    :root {
+      --ex-bg: #040404;
+      --ex-surface: #0e0e0e;
+      --ex-raised: #1f1f1f;
+      --ex-border: rgba(255,255,255,0.08);
+      --ex-purple: #c82aef;
+      --ex-cyan: #1cd9ff;
+      --ex-blue: #2575fc;
+      --ex-gold: #efbc2a;
+      --ex-green: #22c55e;
+      --ex-text-h: #d1d1d1;
+      --ex-text: #8b8b8b;
+      --ex-white: #ffffff;
+      --ex-font: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--ex-font);
+      background: var(--ex-bg);
+      color: var(--ex-text);
+      line-height: 1.5;
+    }
+    a { color: var(--ex-cyan); text-decoration: none; }
+    a:hover { opacity: 0.85; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 1.25rem; }
+    .nav {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(12px);
+      background: rgba(4,4,4,0.85);
+      border-bottom: 1px solid var(--ex-border);
+    }
+    .nav .inner {
+      max-width: 980px; margin: 0 auto; padding: 0.85rem 1.25rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    .brand { display: flex; align-items: center; gap: 0.65rem; color: var(--ex-white); font-weight: 700; letter-spacing: 0.04em; }
+    .brand img { height: 28px; width: auto; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 0.7rem 1.15rem; border-radius: 100px; font-weight: 600; font-size: 0.92rem;
+      border: none; cursor: pointer;
+    }
+    .btn.primary { background: var(--ex-purple); color: var(--ex-white); }
+    .btn.ghost { background: transparent; color: var(--ex-text-h); border: 1px solid var(--ex-border); }
+    .hero { padding: 3rem 0 2rem; }
+    .kicker { color: var(--ex-gold); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; margin: 0 0 0.75rem; }
+    h1 { margin: 0 0 0.75rem; color: var(--ex-white); font-size: clamp(1.6rem, 3.5vw, 2.35rem); line-height: 1.15; }
+    .lede { max-width: 40rem; margin: 0 0 1.5rem; color: var(--ex-text); font-size: 1.05rem; }
+    .meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; margin: 0 0 1.75rem; font-size: 0.85rem; color: var(--ex-text); }
+    .meta strong { color: var(--ex-text-h); font-weight: 600; }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0 2rem; }
+    @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+    .card {
+      background: radial-gradient(at 0% 0%, #1f1f1f 0%, #0e0e0e 55%);
+      border: 1px solid var(--ex-border);
+      border-radius: 12px;
+      padding: 1.15rem 1.2rem 1.25rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+      background: linear-gradient(180deg, var(--ex-purple), var(--ex-cyan));
+    }
+    .card h2 { margin: 0 0 0.85rem; color: var(--ex-white); font-size: 1.05rem; }
+    .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.65rem; margin-bottom: 0.9rem; }
+    .kpi {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--ex-border);
+      border-radius: 10px;
+      padding: 0.7rem 0.65rem;
+      text-align: center;
+    }
+    .kpi .label { font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ex-text); margin-bottom: 0.25rem; }
+    .kpi .val { color: var(--ex-white); font-weight: 700; font-size: 1.05rem; }
+    .strip { font-size: 0.88rem; color: var(--ex-text); }
+    .strip strong { color: var(--ex-text-h); }
+    .ecpm { margin-top: 0.75rem; font-size: 0.85rem; color: var(--ex-cyan); }
+    .section { padding: 0 0 2.5rem; }
+    .section h2 { color: var(--ex-white); font-size: 1.2rem; margin: 0 0 0.85rem; }
+    table {
+      width: 100%; border-collapse: collapse; font-size: 0.9rem;
+      background: var(--ex-surface); border: 1px solid var(--ex-border); border-radius: 12px; overflow: hidden;
+    }
+    th, td { padding: 0.75rem 0.85rem; text-align: left; border-bottom: 1px solid var(--ex-border); }
+    th { color: var(--ex-text-h); background: var(--ex-raised); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    td { color: var(--ex-text); }
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    tr:last-child td { border-bottom: none; color: var(--ex-white); font-weight: 600; }
+    .previews { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+    @media (max-width: 760px) { .previews { grid-template-columns: 1fr; } }
+    .previews figure { margin: 0; }
+    .previews img {
+      width: 100%; border-radius: 12px; border: 1px solid var(--ex-border); display: block;
+    }
+    .previews figcaption { margin-top: 0.45rem; font-size: 0.78rem; color: var(--ex-text); }
+    footer {
+      border-top: 1px solid var(--ex-border);
+      padding: 1.5rem 0 2.5rem;
+      font-size: 0.82rem;
+      color: var(--ex-text);
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Primary">
+    <div class="inner">
+      <a class="brand" href="./">
+        <img src="evx-logo-white.png" alt="">
+        <span>EVOLVEX360</span>
+      </a>
+      <div class="actions">
+        <a class="btn ghost" href="#report">Report</a>
+        <a class="btn primary" href="WSL-Yamaha-Summer-Funnel-Jul-Aug-2026.pdf" download>Download PDF</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="kicker">Partner performance · July + August 2026</p>
+      <h1>WSL Sport · Yamaha Summer Campaign</h1>
+      <p class="lede">Super App funnel outcomes layered with geo-targeted display delivery. Model CPM locked at CA$9.</p>
+      <div class="meta">
+        <span><strong>Dealer</strong> WSL Sport Winnipeg</span>
+        <span><strong>Account</strong> AG-5676GRKHF6</span>
+        <span><strong>Period</strong> 1 Jul – 31 Aug 2026</span>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="WSL-Yamaha-Summer-Funnel-Jul-Aug-2026.pdf" target="_blank" rel="noopener">Open PDF</a>
+        <a class="btn ghost" href="#totals">Jump to totals</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="wrap section" aria-label="Monthly scoreboards">
+    <div class="grid">
+      <article class="card">
+        <h2>July 2026</h2>
+        <div class="kpis">
+          <div class="kpi"><div class="label">Impressions</div><div class="val">253,252</div></div>
+          <div class="kpi"><div class="label">Engagement</div><div class="val">8,349</div></div>
+          <div class="kpi"><div class="label">Leads</div><div class="val">1,327</div></div>
+        </div>
+        <p class="strip"><strong>Display delivery:</strong> 942,190 impr · 924 clicks · 0.10% CTR · 762 conversions</p>
+        <p class="ecpm">EVX media CA$7,500 · eCPM CA$7.96 · $9 model CA$8,479.71</p>
+      </article>
+      <article class="card">
+        <h2>August 2026</h2>
+        <div class="kpis">
+          <div class="kpi"><div class="label">Impressions</div><div class="val">182,229</div></div>
+          <div class="kpi"><div class="label">Engagement</div><div class="val">6,378</div></div>
+          <div class="kpi"><div class="label">Leads</div><div class="val">1,070</div></div>
+        </div>
+        <p class="strip"><strong>Display delivery:</strong> 909,387 impr · 2,021 clicks · 0.22% CTR · 1,538 conversions</p>
+        <p class="ecpm">EVX media CA$7,500 · eCPM CA$8.25 · $9 model CA$8,184.48</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap section" id="totals">
+    <h2>Combined totals · CA$9 CPM model</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th class="num">Display impr</th>
+          <th class="num">EVX media</th>
+          <th class="num">eCPM</th>
+          <th class="num">$9 model</th>
+          <th class="num">Under model</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>July</td>
+          <td class="num">942,190</td>
+          <td class="num">CA$7,500</td>
+          <td class="num">CA$7.96</td>
+          <td class="num">CA$8,479.71</td>
+          <td class="num">CA$979.71</td>
+        </tr>
+        <tr>
+          <td>August</td>
+          <td class="num">909,387</td>
+          <td class="num">CA$7,500</td>
+          <td class="num">CA$8.25</td>
+          <td class="num">CA$8,184.48</td>
+          <td class="num">CA$684.48</td>
+        </tr>
+        <tr>
+          <td>Combined</td>
+          <td class="num">1,851,577</td>
+          <td class="num">CA$15,000</td>
+          <td class="num">CA$8.10</td>
+          <td class="num">CA$16,664.19</td>
+          <td class="num">CA$1,664.19</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:1rem;font-size:0.9rem;">With GST (5%): draft invoices <strong style="color:var(--ex-text-h)">#000675</strong> and <strong style="color:var(--ex-text-h)">#000676</strong> at <strong style="color:var(--ex-text-h)">CA$7,875</strong> each · combined billed <strong style="color:var(--ex-text-h)">CA$15,750</strong>.</p>
+  </section>
+
+  <section class="wrap section" id="report">
+    <h2>Full report</h2>
+    <p style="margin:0 0 0.75rem;">Two-page EvolveX360 performance PDF. Preview below, or <a href="WSL-Yamaha-Summer-Funnel-Jul-Aug-2026.pdf" target="_blank" rel="noopener">open the file</a>.</p>
+    <div class="previews">
+      <figure>
+        <img src="preview-01.png" alt="Yamaha Summer report page 1">
+        <figcaption>Page 1 · July and August scoreboards</figcaption>
+      </figure>
+      <figure>
+        <img src="preview-02.png" alt="Yamaha Summer report page 2">
+        <figcaption>Page 2 · Combined funnel and $9 CPM totals</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      EvolveX360 · WSL Sport Yamaha Summer Campaign · Self-serve partner page
+      · Interim <a href="https://gwleith234.github.io/evolvex360-partners/wsl-yamaha/">github.io</a>
+      · Production target <a href="https://partners.evolvex360.com/wsl-yamaha/">partners.evolvex360.com/wsl-yamaha/</a> after CNAME
+    </div>
+  </footer>
+</body>
+</html>
