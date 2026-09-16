@@ -915,6 +915,90 @@ h1 span, h2 em {
   border-top: 1px solid rgba(255,255,255,.08);
 }
 
+.partner-ask {
+  margin-top: 56px;
+  padding-top: 36px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.partner-ask h3 {
+  font-size: clamp(28px, 3.2vw, 40px);
+  max-width: 720px;
+}
+.ask-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+  margin-top: 28px;
+}
+.ask-card {
+  padding: 26px 24px 24px;
+  border-radius: 16px;
+  background: radial-gradient(at 0% 0%, #1f1f1f 0%, #0e0e0e 55%);
+  border: 1px solid rgba(255,255,255,.1);
+}
+.ask-card.featured {
+  border: 1px solid rgba(239,188,42,.45);
+  border-top: 3px solid var(--gold);
+  box-shadow: 0 18px 48px rgba(239,188,42,.12);
+  background:
+    radial-gradient(ellipse at 0% 0%, rgba(239,188,42,.14), transparent 50%),
+    radial-gradient(at 0% 0%, #1f1f1f 0%, #0e0e0e 55%);
+}
+.ask-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 10px;
+}
+.ask-card.featured .ask-label { color: var(--gold); }
+.ask-card h4 {
+  margin: 0;
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  line-height: 1.2;
+  color: var(--white);
+}
+.ask-card p {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--body);
+}
+
+.close-ask-lead {
+  margin-top: 22px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--heading);
+}
+.close-ask {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  max-width: 480px;
+}
+.close-ask li {
+  position: relative;
+  padding: 10px 14px 10px 16px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--heading);
+}
+.close-ask li.core {
+  border-color: rgba(239,188,42,.4);
+  color: var(--white);
+  box-shadow: inset 3px 0 0 var(--gold);
+}
+
 /* ---------- Proof strip (light, not slide-like) ---------- */
 .proof {
   padding: 72px 0 80px;
@@ -1051,7 +1135,8 @@ h1 span, h2 em {
   .beat-split,
   .live-content,
   .proof-row,
-  .close-grid { grid-template-columns: 1fr; }
+  .close-grid,
+  .ask-grid { grid-template-columns: 1fr; }
   .beat-split.reverse .beat-copy,
   .beat-split.reverse .beat-figure { order: unset; }
   .beat-figure.phone { max-height: none; aspect-ratio: 4 / 5; max-width: 420px; }
