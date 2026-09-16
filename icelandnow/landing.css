@@ -740,101 +740,40 @@ h1 span, h2 em {
   background: #121212;
   border: 1px solid rgba(255,255,255,.12);
   border-radius: 16px;
-  padding: 16px 18px 12px;
+  padding: 16px 18px 14px;
   box-shadow: 0 22px 48px rgba(0,0,0,.5);
 }
-.social-pop .post-head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.social-pop .avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #c82aef, #1cd9ff);
-  display: grid;
-  place-items: center;
-  font-size: 13px;
+.social-pop .tip-label {
+  margin: 0 0 10px;
+  font-size: 11px;
   font-weight: 800;
-  color: #fff;
-  flex-shrink: 0;
-}
-.social-pop .post-id { min-width: 0; }
-.social-pop .post-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  column-gap: 6px;
-  row-gap: 2px;
-  line-height: 1.3;
-}
-.social-pop .who {
-  font-size: 14px;
-  font-weight: 800;
-  color: var(--white);
-}
-.social-pop .handle,
-.social-pop time,
-.social-pop .loc,
-.social-pop .sep {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--body);
-}
-.social-pop .tweet {
-  margin-top: 12px;
-  font-size: 16px;
-  line-height: 1.45;
-  color: var(--white);
-  font-weight: 500;
-}
-.social-pop .post-source {
-  margin-top: 10px;
-  font-size: 12px;
-  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
   color: var(--cyan);
 }
-.social-pop .post-actions {
-  display: flex;
-  align-items: center;
-  gap: 22px;
+.social-pop .tip-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: var(--white);
+  line-height: 1.25;
+}
+.social-pop .tip-body {
+  margin: 10px 0 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--heading);
+  font-weight: 500;
+}
+.social-pop .tip-footer {
   margin-top: 12px;
   padding-top: 10px;
   border-top: 1px solid rgba(255,255,255,.08);
-}
-.social-pop .action {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
+  letter-spacing: .03em;
   color: var(--body);
-}
-.social-pop .action svg {
-  width: 17px;
-  height: 17px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-.social-pop .action.like {
-  color: #e879f9;
-}
-.social-pop .action.like svg { fill: currentColor; stroke: none; }
-.social-pop .sr {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }
 
 /* Economics */
