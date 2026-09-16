@@ -1474,6 +1474,14 @@ h1 span, h2 em {
   color: var(--body);
   max-width: 520px;
 }
+.meet-id {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--cyan);
+}
 .meet-pair {
   width: min(100% - 48px, var(--wide));
   margin-inline: auto;
@@ -1481,6 +1489,8 @@ h1 span, h2 em {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+.meet-pair-single { grid-template-columns: 1fr; }
+.meet-pair-single .meet-shot { max-height: 420px; }
 .meet-shot {
   margin: 0;
   position: relative;
