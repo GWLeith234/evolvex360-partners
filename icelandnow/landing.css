@@ -1490,7 +1490,8 @@ h1 span, h2 em {
   gap: 20px;
 }
 .meet-pair-single { grid-template-columns: 1fr; }
-.meet-pair-single .meet-shot { max-height: 420px; }
+.meet-hero-still { min-height: 380px; }
+.meet-hero-still img { min-height: 380px; object-position: center; }
 .meet-shot {
   margin: 0;
   position: relative;
