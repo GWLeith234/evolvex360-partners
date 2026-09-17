@@ -34,15 +34,18 @@
     <div class="wrap hero-grid">
       <div class="hero-copy">
         <div class="logo-lock">
-          <img src="assets/evx-logo-white.png" alt="EvolveX360">
+          <img class="logo-mark" src="assets/evx-logo-white.png" alt="EvolveX360">
           <div>
             <div class="word">EVOLVEX360</div>
-            <div class="sub">Gilsi · Partner growth</div>
+            <div class="sub-row">
+              <img class="gilsi-face" src="assets/gilsi.jpg" alt="Gilsi Sigvaldason">
+              <div class="sub">Gilsi · Partner growth</div>
+            </div>
           </div>
         </div>
         <p class="kicker">IcelandNOW × Sylvia</p>
         <h1>The guide that stays with your guests.<span>Bookings that credit you.</span></h1>
-        <p class="lede hero-lede">Put Sylvia at your door. She stays with your guests for the whole stay and points them to perfect Icelandic excursions. Checkout with our Booking Partner, TourDesk Iceland. Revenue splits 50 / 50 with EvolveX360. You get credit for opening the door.</p>
+        <p class="lede hero-lede">Sylvia meets travelers across the stay: lobby screens, airport DOOH, car and taxi QR, hotel brochures, in-room welcome, and the booking verify email. Then she walks them through Iceland today. When they book, revenue splits 50 / 50 with EvolveX360.</p>
         <div class="actions">
           <a class="btn" href="#customer-journey">See The Customer Journey</a>
           <a class="btn ghost" href="#close">Partner with us</a>
@@ -61,8 +64,8 @@
       <p class="kicker">The goal</p>
       <h2>Help guests find the very best excursions in Iceland.<em> Connect operators with business they might not have earned.</em></h2>
       <div class="bridge-split">
-        <p>Sylvia runs on IcelandNOW: a live feed of news, events, and attractions. She matches taste and timing, then sends guests to book.</p>
-        <p>You open the door. Sylvia guides the stay. Booking Partner TourDesk Iceland closes the sale. Everyone gets paid.</p>
+        <p>Sylvia is powered by IcelandNOW: a live feed of news, events, and attractions. She suggests curated trips that match taste and timing, then routes checkout to TourDesk Iceland.</p>
+        <p>Partners open the door. Guests get a guide for the whole stay. Operators get new demand. Everyone gets paid.</p>
       </div>
     </div>
   </section>
@@ -71,9 +74,9 @@
   <section class="journey" id="customer-journey">
     <div class="journey-head">
       <div class="wrap">
-        <p class="kicker">Five beats</p>
-        <h2 class="journey-title">The Customer Journey</h2>
-        <p class="lede">Arrive. Meet Sylvia. Stay on with IcelandNOW. Book with Booking Partner TourDesk Iceland. Split 50 / 50.</p>
+        <p class="kicker">Customer Journey</p>
+        <h2 class="journey-title">Customer Journey</h2>
+        <p class="lede">Arrive, meet Sylvia, stay on with IcelandNOW, book on TourDesk Iceland, then the commercial terms.</p>
       </div>
       <nav class="journey-rail" aria-label="The Customer Journey steps">
         <div class="wrap rail-inner">
@@ -89,41 +92,30 @@
     <!-- 01 · Arrive -->
     <article class="beat beat-arrive" id="cj-arrive">
       <div class="beat-media full arrive-media">
-        <div class="arrive-stage" aria-hidden="true">
+        <!-- ARRIVE_GIF -->
+        <!-- MP4 wired: journey/arrive-plane-landing.mp4 (portrait 464×688). Replaces CSS .arrive-stage craft animation. -->
+        <div class="arrive-video-stage" aria-hidden="true">
           <div class="arrive-aurora"></div>
           <div class="arrive-stars"></div>
-          <div class="arrive-horizon"></div>
-          <div class="arrive-ground">
-            <div class="arrive-runway">
-              <span class="rw-center"></span>
-              <span class="rw-edge left"></span>
-              <span class="rw-edge right"></span>
-            </div>
-          </div>
-          <div class="arrive-craft">
-            <span class="arrive-beam"></span>
-            <svg class="plane-svg" viewBox="0 0 220 64" role="img">
-              <title>Aircraft on final approach</title>
-              <path d="M78 34 L18 58 L36 34 L18 12 Z" fill="#d8d8d8"/>
-              <path d="M176 24 L214 6 L204 30 L214 40 L176 34 Z" fill="#c8c8c8"/>
-              <path d="M14 30 C24 20 48 18 88 20 L178 22 C192 22 200 26 198 31 C196 36 186 38 176 38 L88 40 C48 42 22 38 10 32 C8 30 10 28 14 30 Z" fill="#f3f3f3"/>
-              <ellipse cx="20" cy="31" rx="10" ry="3.2" fill="#1cd9ff" opacity=".45"/>
-              <g fill="#1cd9ff">
-                <circle cx="58" cy="29" r="2.1"/>
-                <circle cx="74" cy="28.6" r="2.1"/>
-                <circle cx="90" cy="28.4" r="2.1"/>
-                <circle cx="106" cy="28.4" r="2.1"/>
-                <circle cx="122" cy="28.6" r="2.1"/>
-                <circle cx="138" cy="29" r="2.1"/>
-              </g>
-            </svg>
+          <div class="arrive-video-frame">
+            <video
+              class="arrive-video"
+              src="journey/arrive-plane-landing.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+            ></video>
           </div>
         </div>
+        <!-- Old CSS plane craft stage kept hidden for reference; do not show under/over video -->
+        <div class="arrive-stage" hidden aria-hidden="true"></div>
         <div class="beat-overlay">
           <div class="wrap">
             <span class="beat-label on-dark">01 · Arrive</span>
             <h3>They land. The stay begins.</h3>
-            <p>Wheels down in Iceland. The family has a rental and a room. The trip is open. What they still need is a guide for today, not another brochure stack.</p>
+            <p>Wheels down in Iceland. The family has a rental and a room. The trip is open. They still need a guide for what to do today.</p>
           </div>
         </div>
       </div>
@@ -136,13 +128,8 @@
         <div class="meet-hi-grid">
           <img class="meet-avatar" src="img/sylvia.jpg" alt="Sylvia, IcelandNOW AI travel expert. Blonde, lopapeysa, Kirkjufell behind her.">
           <div class="meet-hi-copy">
-            <h3>Hi! I’m Sylvia</h3>
-            <p class="meet-id">Your AI travel expert · Iceland</p>
-            <p>She greets the family at the start of the stay. Same guide on every door, tagged to you as the Partner who hosted them. Below is how she shows up on each channel.</p>
-            <div class="quote-chip">
-              <img src="img/sylvia.jpg" alt="">
-              <p>“Ask me what is happening in Iceland today. I will find the match.”</p>
-            </div>
+            <!-- MEET_SYLVIA_COPY -->
+            <h3>Hi, I'm Sylvia, your AI travel expert.</h3>
           </div>
         </div>
       </div>
@@ -152,50 +139,11 @@
           <figcaption>Meeting Sylvia</figcaption>
         </figure>
       </div>
-      <div class="wrap meet-pair">
-        <figure class="meet-shot">
-          <img src="journey/sylvia-suv-family.png" alt="Sylvia in a rental SUV with the family, pointing the way across the Icelandic landscape">
-          <figcaption>Car / in-trip</figcaption>
-        </figure>
-        <figure class="meet-shot">
-          <img src="journey/sylvia-news-onscreen-lt.png" alt="Lobby screen with Sylvia as newscaster. Iceland NOW | Sylvia lower third is on the screen, with a QR code">
-          <figcaption>Lobby / DOOH screen</figcaption>
-        </figure>
-      </div>
-      <div class="wrap discover-intro">
-        <p class="discover-lede">Every place guests meet Sylvia: lobby screens, airport digital out-of-home (DOOH), car and taxi QR, hotel brochures, in-room welcome, the booking verify email, and the tablet or phone in their pocket.</p>
-      </div>
-      <div class="wrap discover-mosaic">
-        <figure class="discover-feature">
-          <img src="journey/sylvia-news-onscreen-lt.png" alt="Sylvia on an IcelandNOW lobby screen with live volcano news. On-screen lower third: Iceland NOW | Sylvia">
-          <figcaption>IcelandNOW screen</figcaption>
-        </figure>
-        <div class="discover-grid">
-          <figure class="discover-tile">
-            <img src="journey/cj-lobby-screen.png" alt="Lobby screen introducing Sylvia">
-            <figcaption>Lobby screen</figcaption>
-          </figure>
-          <figure class="discover-tile">
-            <img src="journey/cj-07-airport-dooh.png" alt="DOOH billboard at the airport featuring Sylvia">
-            <figcaption>Airport DOOH</figcaption>
-          </figure>
-          <figure class="discover-tile">
-            <img src="journey/cj-brochure.png" alt="Hotel brochure with Sylvia">
-            <figcaption>Hotel brochure</figcaption>
-          </figure>
-          <figure class="discover-tile">
-            <img src="journey/cj-08-room-welcome.png" alt="In-room welcome screen with CTA to Sylvia from IcelandNOW">
-            <figcaption>In-room welcome</figcaption>
-          </figure>
-          <figure class="discover-tile">
-            <img src="journey/cj-02-verify-email.png" alt="Booking verify email with Chat with Sylvia">
-            <figcaption>Booking verify email</figcaption>
-          </figure>
-          <figure class="discover-tile">
-            <img src="journey/cj-06-icelandnow-tablet.png" alt="Guest opening IcelandNOW on a tablet">
-            <figcaption>Tablet / phone</figcaption>
-          </figure>
-        </div>
+      <div class="wrap meet-sylvia-body">
+        <!-- MEET_SYLVIA_COPY -->
+        <p>I know Iceland the way a local guide knows it on a good day: what is open, what is worth the drive, and what matches the guests in front of you. Taste, timing, weather windows, and the trips that fit this stay, not a generic brochure list.</p>
+        <p>That intelligence comes from swarms of researchers and reporters who keep IcelandNOW updating. News, events, attractions, and on-the-ground signals land in the feed Sylvia reads. She stays current because the feed stays current.</p>
+        <p>Guests meet me where the trip already happens: the hotel lobby, the rental car, the airport, or a scan of your QR. Same guide every time, tagged to you as the Partner who opened the door. That makes the trip easier. They ask once, get a clear next step, and keep moving.</p>
       </div>
     </article>
 
@@ -205,17 +153,20 @@
         <div class="beat-copy">
           <span class="beat-label">03 · Always on</span>
           <h3>Sylvia stays with them for the whole trip</h3>
-          <p>Guests can talk to Sylvia anytime. Behind her, IcelandNOW’s swarm of AI agents is scouring the island and monitoring social chatter to help design perfect Icelandic excursions. The same swarm of reporters and researchers publishes stories every minute of every day. Sylvia queries that live feed so advice stays current mid-stay, not stuck in a static brochure.</p>
+          <p>Guests can talk to Sylvia anytime during the stay. Behind her, AI agents are scouring data and social chatter so advice tracks what is happening now. That includes weather alerts and impassable roads, not only attraction highlights.</p>
+          <p>IcelandNOW is the foundation Sylvia sits on. The live feed is the source. Sylvia is the guide on top of it.</p>
+          <p>She stays polite and de-escalates when a guest is frustrated or stuck. We monitor conversations and learn from them so the next guest gets a cleaner answer, and so Partners get help that protects the stay, not noise that burns goodwill.</p>
           <div class="live-tags">
             <span>Always on</span>
             <span>AI swarm</span>
             <span>Social chatter</span>
             <span>Live stories</span>
+            <span>Weather and roads</span>
           </div>
         </div>
         <figure class="beat-art tablet-art">
           <img src="journey/cj-06-icelandnow-tablet.png" alt="Guest scrolling IcelandNOW.com on a tablet">
-          <figcaption>IcelandNOW.com. The live feed the swarm publishes and Sylvia queries.</figcaption>
+          <figcaption>IcelandNOW.com. The live foundation Sylvia queries for the whole trip.</figcaption>
         </figure>
       </div>
       <div class="wrap meet-pair always-pair">
@@ -248,10 +199,12 @@
           <img class="live-photo" src="journey/cj-04-geyser-live.png" alt="Geyser eruption with visitors watching">
           <div class="live-veil"></div>
           <aside class="social-pop tip-card" aria-label="Example tip Sylvia can surface mid-stay">
-            <p class="tip-label">Example tip Sylvia can surface mid-stay</p>
-            <h4 class="tip-title">Strokkur is active right now</h4>
-            <p class="tip-body">If you are near Geysir, wait about 5 to 10 minutes for the next eruption. Best view is from the rope line. Keep your camera ready and give the spray room.</p>
-            <p class="tip-footer">Timing tip from IcelandNOW live coverage · not a Partner performance report</p>
+            <p class="example-label">Example tip Sylvia can surface mid-stay</p>
+            <p class="tip-origin">How that tip appears: IcelandNOW's swarm watches Golden Circle chatter and live conditions. Strokkur erupts every few minutes. When the feed is hot and the guest is nearby, Sylvia says go now.</p>
+            <p class="tip-title">Strokkur is active right now</p>
+            <p class="tweet">Strokkur is active right now. On a normal day it erupts about every 6 to 10 minutes. If you are already on the Golden Circle, head to the rope line and keep your camera ready. Give the spray room.</p>
+            <p class="tip-cta">Want a guided stop at Geysir? I can show what is bookable today.</p>
+            <p class="post-source">Timing tip from IcelandNOW live coverage - EXAMPLE, not a Partner performance report</p>
           </aside>
         </div>
       </div>
@@ -259,27 +212,20 @@
 
     <!-- 04 · TourDesk -->
     <article class="beat beat-book" id="cj-book">
-      <div class="wrap beat-split">
+      <div class="wrap">
         <div class="beat-copy">
           <span class="beat-label">04 · TourDesk</span>
           <h3>Booking happens with Booking Partner TourDesk Iceland</h3>
           <p>Sylvia finds the match. Checkout with our Booking Partner, TourDesk Iceland. Confirmation stays on the channel tagged to you as the Partner who opened the door.</p>
+          <p>TourDesk is an Iceland-founded booking platform hotels and other doors already use to sell tours, activities, transfers, cars, and more with real-time availability. Guests book on a live catalog. Front desks can book too. Sylvia does not invent a second checkout stack. She routes the sale to Booking Partner TourDesk so payment, confirmation, and operator fulfillment stay on rails partners already trust.</p>
+          <p>You keep credit for opening the door. TourDesk closes the sale.</p>
+          <p class="tourdesk-support">You are the Partner (hotel, rental, attraction). TourDesk is our Booking Partner. You open the door. They close the sale.</p>
           <div class="meta">
             <span class="pill cyan">Curated match</span>
-            <span class="pill">Booking Partner TourDesk Iceland</span>
+            <span class="pill">Booking Partner TourDesk</span>
             <span class="pill gold">Partner credited</span>
           </div>
         </div>
-        <figure class="shot-frame shot-hero">
-          <div class="shot-chrome" aria-hidden="true">
-            <span class="shot-dot"></span>
-            <span class="shot-dot"></span>
-            <span class="shot-dot"></span>
-            <span class="shot-url">book.tourdesk.is</span>
-          </div>
-          <img src="journey/tourdesk-booking-hero.png" alt="TourDesk Iceland book UI: Golden Circle and South Coast Tour, date, time, price, Add to Cart and Express Checkout">
-          <figcaption>TourDesk book panel · date, guests, checkout</figcaption>
-        </figure>
       </div>
       <div class="wrap book-live">
         <figure class="shot-frame shot-live">
@@ -290,9 +236,8 @@
             <span class="shot-url">book.tourdesk.is · Golden Circle &amp; South Coast Tour</span>
           </div>
           <img src="journey/tourdesk-booking-live.png" alt="TourDesk Iceland checkout and book UI. Full product page for Golden Circle and South Coast Tour with booking panel, price, Add to Cart, and Express Checkout.">
-          <figcaption>Booking Partner TourDesk Iceland · checkout / book UI</figcaption>
+          <figcaption>TourDesk Iceland checkout / book UI · live product page</figcaption>
         </figure>
-        <p class="book-support-note">You are the Partner (hotel, rental, attraction). TourDesk is our Booking Partner. You open the door. They close the sale.</p>
       </div>
     </article>
 
@@ -301,11 +246,11 @@
       <div class="wrap">
         <span class="beat-label">05 · Commercial Terms</span>
         <h3>Everyone gets paid</h3>
-        <p class="econ-lede">When the guest books, the split is simple and equal.</p>
+        <p class="econ-lede">When the guest books, the commercial split is simple and equal.</p>
         <div class="econ-grid">
           <div class="econ-card partner">
             <div class="econ-pct">50%</div>
-            <div class="econ-who">to the Partner <em>(you)</em></div>
+            <div class="econ-who">to the partner <em>(you)</em></div>
             <p>Credit for the door that introduced Sylvia: hotel, rental, attraction, or brand touchpoint.</p>
           </div>
           <div class="econ-divider" aria-hidden="true">
@@ -314,131 +259,37 @@
           <div class="econ-card us">
             <div class="econ-pct">50%</div>
             <div class="econ-who">to EvolveX360 <em>(us)</em></div>
-            <p>Platform, Sylvia, IcelandNOW intel, and the Booking Partner TourDesk Iceland path that closes the sale.</p>
+            <p>Platform, Sylvia, IcelandNOW intel, and the TourDesk Iceland path that closes the sale.</p>
           </div>
         </div>
-        <p class="econ-foot">Guests get better excursions. Operators get demand they might not have earned. You get 50%.</p>
+        <div class="growth-pitch">
+          <!-- GROWTH_PITCH -->
+          <p>Today, last month's TourDesk cheque is 100% yours. A lot of guest spend still never reaches that cheque because guests never find the trip.</p>
+          <p>Add the stack: Sylvia and IcelandNOW, your brand at the door, traffic through the stay, network advertising, and IcelandNOW as the definitive local source. We share new booked revenue 50 / 50 with EvolveX360 and grow the pool together.</p>
+        </div>
+        <p class="econ-foot">Goal locked: best excursions for guests. New business for operators who might not have earned it otherwise.</p>
         <div class="partner-ask" id="ask">
-          <p class="kicker">The partner ask</p>
-          <h3>As a Partner, you get three things:</h3>
+          <!-- PARTNER_CLOSE -->
+          <h3>As a partner, you get three things.</h3>
           <div class="ask-grid">
-            <article class="ask-col">
-              <div class="ask-card">
-                <p class="ask-label">Media</p>
-                <h4>Ads on IcelandNOW</h4>
-                <p>Your brand on the live IcelandNOW site guests already open with Sylvia.</p>
-              </div>
-              <div class="ask-example">
-                <figure class="shot-frame ask-ad">
-                  <div class="shot-chrome" aria-hidden="true">
-                    <span class="shot-dot"></span>
-                    <span class="shot-dot"></span>
-                    <span class="shot-dot"></span>
-                    <span class="shot-url">icelandnow.com · Sponsored</span>
-                    <span class="shot-badge">Example · not live inventory</span>
-                  </div>
-                  <img src="journey/ask/ad-flora.png" alt="Example sponsored Flóra Hotels ad on IcelandNOW.">
-                  <figcaption>Example ad · Flóra Hotels on IcelandNOW</figcaption>
-                </figure>
-                <figure class="shot-frame ask-ad ask-ad-mobile">
-                  <div class="shot-chrome" aria-hidden="true">
-                    <span class="shot-dot"></span>
-                    <span class="shot-dot"></span>
-                    <span class="shot-dot"></span>
-                    <span class="shot-url">icelandnow.com · In-feed</span>
-                    <span class="shot-badge">Example · not live inventory</span>
-                  </div>
-                  <img src="journey/ask/ad-hertz-mobile.png" alt="Example Hertz Iceland in-feed ad on IcelandNOW mobile.">
-                  <figcaption>Example ad · Hertz Iceland in-feed</figcaption>
-                </figure>
-              </div>
+            <article class="ask-card">
+              <p class="ask-label">Media</p>
+              <h4>Ads on IcelandNOW</h4>
+              <p>Your brand on the live IcelandNOW site guests already open with Sylvia. Real placements guests see while they plan the day.</p>
             </article>
-            <article class="ask-col featured">
-              <div class="ask-card featured">
-                <p class="ask-label">Core feature</p>
-                <h4>Premium Directory listing on IcelandNOW</h4>
-                <p>Directory stays a core feature. Your business stays findable on IcelandNOW, not a one-time mention.</p>
-              </div>
-              <div class="ask-example">
-                <figure class="shot-frame ask-directory">
-                  <div class="shot-chrome" aria-hidden="true">
-                    <span class="shot-dot"></span>
-                    <span class="shot-dot"></span>
-                    <span class="shot-dot"></span>
-                    <span class="shot-url">icelandnow.com · Directory</span>
-                    <span class="shot-badge">Mock · coming on IcelandNOW</span>
-                  </div>
-                  <img src="journey/ask/directory-mock.png" alt="Deck mock. How your business can appear as a findable listing on IcelandNOW.">
-                  <figcaption>Deck mock. How your business can appear as a findable listing on IcelandNOW. Full Directory platform comes later.</figcaption>
-                </figure>
-              </div>
+            <article class="ask-card featured">
+              <p class="ask-label">Core feature</p>
+              <h4>Premium Directory listing on IcelandNOW</h4>
+              <p>Build out your business on IcelandNOW. Stay findable as a core listing, not a one-time mention. Directory mock on the deck shows the idea; full platform comes in the sprint.</p>
             </article>
-            <article class="ask-col">
-              <div class="ask-card">
-                <p class="ask-label">Doors</p>
-                <h4>QR Codes for your business to promote Sylvia</h4>
-                <p>Print them. Place them where guests already look. Guests scan, meet Sylvia, and bookings credit you.</p>
-              </div>
-              <div class="ask-example">
-                <figure class="shot-frame ask-qr-room">
-                  <div class="shot-chrome" aria-hidden="true">
-                    <span class="shot-dot"></span>
-                    <span class="shot-dot"></span>
-                    <span class="shot-dot"></span>
-                    <span class="shot-url">In-room · Scan QR</span>
-                    <span class="shot-badge">Example · hotel room screen</span>
-                  </div>
-                  <div class="ask-room-pair">
-                    <img class="ask-room-tv" src="journey/cj-08-room-welcome.png" alt="Hotel room welcome screen with Sylvia and a scan QR on the TV.">
-                    <img class="ask-room-card" src="journey/ask/hotel-room-card-201.png" alt="201 Hotel Flóra ASK SYLVIA room screen with door QR.">
-                  </div>
-                  <figcaption>Example · hotel room screen. Guests scan from the room and bookings credit you.</figcaption>
-                </figure>
-                <figure class="shot-frame ask-qr">
-                  <div class="shot-chrome" aria-hidden="true">
-                    <span class="shot-dot"></span>
-                    <span class="shot-dot"></span>
-                    <span class="shot-dot"></span>
-                    <span class="shot-url">Partner doors · QR</span>
-                    <span class="shot-badge">Example · partner doors</span>
-                  </div>
-                  <div class="ask-qr-trio">
-                    <div class="ask-qr-item">
-                      <div class="ask-qr-logo light">
-                        <img src="journey/partners/logo-201.png" alt="">
-                      </div>
-                      <p class="ask-qr-name">201 Hotel</p>
-                      <p class="ask-qr-meta">Flóra Collection</p>
-                      <div class="ask-qr-code">
-                        <img src="journey/partners/qr-201-door.png" alt="201 Hotel door QR">
-                      </div>
-                    </div>
-                    <div class="ask-qr-item">
-                      <div class="ask-qr-logo light">
-                        <img src="journey/partners/logo-nordurflug.png" alt="">
-                      </div>
-                      <p class="ask-qr-name">Norðurflug</p>
-                      <p class="ask-qr-meta">Helicopter.is</p>
-                      <div class="ask-qr-code">
-                        <img src="journey/partners/qr-nordurflug-door.png" alt="Norðurflug door QR">
-                      </div>
-                    </div>
-                    <div class="ask-qr-item">
-                      <div class="ask-qr-logo hertz">
-                        <img src="journey/partners/logo-hertz.png" alt="">
-                      </div>
-                      <p class="ask-qr-name">Hertz</p>
-                      <p class="ask-qr-meta">Rental</p>
-                      <div class="ask-qr-code">
-                        <img src="journey/partners/qr-hertz-door.png" alt="Hertz door QR">
-                      </div>
-                    </div>
-                  </div>
-                  <figcaption>Example door QR codes · scan opens Sylvia with credit to that Partner.</figcaption>
-                </figure>
-              </div>
+            <article class="ask-card">
+              <p class="ask-label">Doors</p>
+              <h4>QR Codes for your business to promote Sylvia</h4>
+              <p>Pick the placements you like. Gilsi and the ground team produce the codes. Guests scan, meet Sylvia, and bookings credit you.</p>
             </article>
           </div>
+          <p class="ask-network">Partners are already working with us across hotels, rentals, and attractions. The list grows as more doors put Sylvia on the path.</p>
+          <p class="ask-econ">Today you keep 100% of last month's TourDesk cheque. Many guests never access those dollars. With the tech, your brand, the traffic, network advertising, and IcelandNOW as the definitive local source, we share 50 / 50 and grow it together.</p>
         </div>
       </div>
     </article>
@@ -449,7 +300,7 @@
     <div class="wrap">
       <p class="kicker">Live doors</p>
       <h2>Our partner network</h2>
-      <p class="network-lede">Each door has its own QR. Guests scan, meet Sylvia, and book with Booking Partner TourDesk Iceland. Credit goes back to that Partner.</p>
+      <p class="network-lede">Each door has its own QR. Guests scan, meet Sylvia, and book on TourDesk Iceland with credit back to the partner.</p>
       <div class="door-grid">
         <article class="door-card">
           <div class="door-logo light">
@@ -505,7 +356,7 @@
       <div>
         <p class="kicker">EvolveX360 Iceland</p>
         <h2>Put Sylvia on your guests’ path.</h2>
-        <p class="close-ask-lead">As a Partner, you get three things:</p>
+        <p class="close-ask-lead">As a partner you receive the following:</p>
         <ul class="close-ask">
           <li>Ads on IcelandNOW</li>
           <li class="core">Premium Directory listing on IcelandNOW</li>
